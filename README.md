@@ -44,3 +44,15 @@ Build from Source
 * make (you should setup the cross-toolchains correctly)
 
 * You're done. You can use the `./patches/packaging.sh` to generate a tarball if you want.
+
+Install the Kernel (from Binary Release)
+--------------------
+```
+cd /tmp
+wget https://github.com/biergaizi/loongson-sources/releases/download/v3.16.4/linux-3.16.4-yeeloong-gaizi.tar.xz
+tar xf linux-3.16.4-yeeloong-gaizi.tar.xz
+sudo cp -r 3.16.4-yeeloong-gaizi/boot/* /boot
+sudo cp -r 3.16.4-yeeloong-gaizi/lib/* /lib
+sudo update-grub
+sudo reboot
+```
